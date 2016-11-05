@@ -1,0 +1,15 @@
+#+TITLE: EuroStar Conference 2016 - Stockholm Sweden
+#+DATE: 2016-11-03
+#+SETUPFILE: ~/code/org-style/setupfile.org
+#+JEKYLL_LAYOUT: post
+#+JEKYLL_CATEGORIES: Testing, Stockholm, Eurostar
+#+JEKYLL_TAGS:
+#+JEKYLL_PUBLISHED: true
+
+* The EuroSTAR Conference has finished
+After 4 Days the Eurostar Conference 2016 has finished and it showed
+up that I got to much to work up again. I will for sure go and get the
+news I fetched up here. But for now I will go to get some relaxing for
+the next 4 days. :) Have fun, like I will have in Stockholm.
+
+{{{more}}}
