@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Testing, Security and DevOps]]></title>
+  <link href="http://golodhrim.github.io/atom.xml" rel="self"/>
+  <link href="http://golodhrim.github.io/"/>
+  <updated>2016-11-05T15:41:42+01:00</updated>
+  <id>http://golodhrim.github.io/</id>
+  <author>
+    <name><![CDATA[Martin 'golodhrim' Scholz]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[EuroStar Conference 2016 - Stockholm Sweden]]></title>
+    <link href="http://golodhrim.github.io/blog/2016-11-03-eurostar-conf.html"/>
+    <updated>2016-11-03T00:00:00+01:00</updated>
+    <id>http://golodhrim.github.io/blog/eurostar-conf</id>
+    <content type="html"><![CDATA[<div id="outline-container-orgheadline1" class="outline-2">
+<h2 id="orgheadline1">The EuroSTAR Conference has finished</h2>
+<div class="outline-text-2" id="text-orgheadline1">
+<p>
+After 4 Days the Eurostar Conference 2016 has finished and it showed
+up that I got to much to work up again. I will for sure go and get the
+news I fetched up here. But for now I will go to get some relaxing for
+the next 4 days. :) Have fun, like I will have in Stockholm.
+</p>
+
+<p>
+<!-- more -->
+</p>
+</div>
+</div>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://golodhrim.github.io/sitemap.xml 
