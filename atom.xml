@@ -4,7 +4,7 @@
   <title><![CDATA[Testing, Security and DevOps]]></title>
   <link href="http://golodhrim.github.io/atom.xml" rel="self"/>
   <link href="http://golodhrim.github.io/"/>
-  <updated>2016-11-05T16:47:39+01:00</updated>
+  <updated>2016-11-05T16:52:37+01:00</updated>
   <id>http://golodhrim.github.io/</id>
   <author>
     <name><![CDATA[Martin 'golodhrim' Scholz]]></name>
@@ -12,6 +12,27 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Test]]></title>
+    <link href="http://golodhrim.github.io/blog/2016-11-05-test.html"/>
+    <updated>2016-11-05T00:00:00+01:00</updated>
+    <id>http://golodhrim.github.io/blog/test</id>
+    <content type="html"><![CDATA[<div id="outline-container-orgheadline1" class="outline-2">
+<h2 id="orgheadline1">Testen für die Welt</h2>
+<div class="outline-text-2" id="text-orgheadline1">
+<p>
+Testen was das Zeug hält&#x2026;
+</p>
+
+
+<p>
+<!-- more -->
+</p>
+</div>
+</div>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[EuroStar Conference 2016 - Stockholm Sweden]]></title>
