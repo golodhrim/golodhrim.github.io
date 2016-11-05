@@ -79,7 +79,7 @@ google_plus_one_size: medium
 
 # Google Plus Profile
 # Hidden: No visible button, just add author information to search results
-googleplus_user: golodhrim
+googleplus_user: MartingolodhrimScholz
 googleplus_hidden: false
 
 # Pinboard
@@ -91,11 +91,11 @@ delicious_user:
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name: 
+disqus_short_name: golodhrimLin
 disqus_show_comment_count: false
 
 # Google Analytics
-google_analytics_tracking_id:
+google_analytics_tracking_id: UA-38500069-2
 
 # Facebook Like
 facebook_like: false
