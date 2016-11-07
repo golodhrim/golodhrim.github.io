@@ -33,7 +33,7 @@ They soon discovered that the Spirit had encountered a serious anomaly and was r
 According to an article on the site Spaceflight Now, the Mars Rover problem was that there were *too many files on the flash memory*.
 
 - Available Disk Space on Install ::
-#+BEGIN_SRC dot :file ../images/blog/mindmap.png :exports results
+#+BEGIN_SRC dot :file ../blogimages/mindmap.png :exports results
   digraph graphname {
     U [label="User", shape=box, style=filled, color=blue]
     I [label="Installer", style=filled, color=yellow]
