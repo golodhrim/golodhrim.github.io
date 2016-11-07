@@ -1,0 +1,17 @@
+#+TITLE: EuroSTAR Conference 2016 - day 3 summary
+#+DATE: 2016-11-02
+#+SETUPFILE: ~/code/org-style/setupfile.org
+#+JEKYLL_LAYOUT: post
+#+JEKYLL_CATEGORIES: EuroSTAR, Conference, Testing
+#+JEKYLL_TAGS: EuroSTAR, Conference, 2016, Testing
+#+JEKYLL_PUBLISHED: false
+
+* EuroSTAR Conference 2016 Day 3 has passed, What happened today?
+
+* "Application Security Testing: A new approach" by Declan O'Riordan
+
+* "Instructional Games for Testers" by Graham Thomas
+
+
+
+{{{more}}}

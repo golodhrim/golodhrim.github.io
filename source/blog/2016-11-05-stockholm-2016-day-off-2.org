@@ -1,0 +1,12 @@
+#+TITLE: Stockholm 2016 - Holiday after Conference
+#+DATE: 2016-11-05
+#+SETUPFILE: ~/code/org-style/setupfile.org
+#+JEKYLL_LAYOUT: post
+#+JEKYLL_CATEGORIES: Stockholm, holiday, friends, days off, fun, EF, Electronic force
+#+JEKYLL_TAGS: Stockholm, holiday, vacation, days off, fun, friends, EF, electronic force
+#+JEKYLL_PUBLISHED: false
+
+* Electronic Force party night - We had the hell open
+
+
+{{{more}}}

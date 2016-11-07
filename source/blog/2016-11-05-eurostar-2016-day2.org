@@ -1,0 +1,25 @@
+#+TITLE: EuroSTAR Conference 2016 - day 2 summary
+#+DATE: 2016-11-01
+#+SETUPFILE: ~/code/org-style/setupfile.org
+#+JEKYLL_LAYOUT: post
+#+JEKYLL_CATEGORIES: EuroSTAR, Conference, Testing
+#+JEKYLL_TAGS: EuroSTAR, Conference, 2016, Testing
+#+JEKYLL_PUBLISHED: false
+
+* Day 2 of the EuroSTAR Conference has passed with a lot of happening
+This day was just dedicated to the Question "How can we learn from new
+Testers and how can we learn new Testers to use the other view at
+software". By some introduction games we all learned on how to act and
+see in a new style.
+
+* Stay Sharp by James Lyndsay
+
+* "How to Test the Inside of your Head" by Liz Keogh
+
+* "Two Generations in Software Testing - the Way we learn" by Christian and Gitte Ottosen
+
+* "Lessons learned from the worst bug I ever found" by Ru Cindrea
+
+
+
+{{{more}}}

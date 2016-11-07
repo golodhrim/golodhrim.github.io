@@ -1,0 +1,18 @@
+#+TITLE: EuroSTAR Conference 2016 - day 1 summary
+#+DATE: 2016-10-31
+#+SETUPFILE: ~/code/org-style/setupfile.org
+#+JEKYLL_LAYOUT: post
+#+JEKYLL_CATEGORIES: EuroSTAR, Conference, Testing
+#+JEKYLL_TAGS: EuroSTAR, Conference, 2016, Testing
+#+JEKYLL_PUBLISHED: false
+
+* EuroSTAR Conference 2016 - First Day Summary
+The First day was honored to the topic of testing with
+variables. Thank you ... for the notes you gave us and showed us on
+how to test by variables while also finding out about the subjects on
+how to generate these variables and use them.
+
+* Notes from "Testing with variables" by Dale Emery taken by Martin 'golodhrim' Scholz
+
+
+{{{more}}}
