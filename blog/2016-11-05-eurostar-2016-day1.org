@@ -60,6 +60,30 @@ I could vary <VARIABLENAME>.
 (<N>) possible values for <VARIABLENAME> are <VAR1>, <VAR2>, ... and <VARn>.
 #+END_QUOTE
 
+** Testing is an Information Service
+#+BEGIN_QUOTE
+Testing is a process of gathering informatiion by making observations
+and comparing them to expectations.
+
+Information reduces uncertainty. Decision makers use this information
+to move the project forward.
+
+We have a responsibility to provide those decision makers with the
+best information we can.
+#+END_QUOTE
+
+First explore for that who are your *stakeholders*. If you know who
+they will be, try to gather the questions they want to be answered
+about the software and what you can do to discover the information
+that will cover them. Now it is time on how to provide the
+information.
+
+For that we need to move from variables to tests.
+#. Identify stakeholders' needs
+#. Brainstorm variables for it
+#. Select a variable to explore
+#. Select a value to try and
+#. run it.
 
 
 {{{more}}}
