@@ -47,7 +47,7 @@ According to an article on the site Spaceflight Now, the Mars Rover problem was 
 #+END_SRC
 
 #+RESULTS:
-[[file:images/mindmap.png]]
+[[file:../blogimages/mindmap.png]]
 
 To make sure you identified a variable right, try this tip:
 
