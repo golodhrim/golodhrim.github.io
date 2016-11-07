@@ -5,6 +5,7 @@
 #+JEKYLL_CATEGORIES: EuroSTAR, Conference, Testing
 #+JEKYLL_TAGS: EuroSTAR, Conference, 2016, Testing
 #+JEKYLL_PUBLISHED: false
+#+JEKYLL_COMMENTS: true
 
 * EuroSTAR Conference 2016 Day 3 has passed, What happened today?
 

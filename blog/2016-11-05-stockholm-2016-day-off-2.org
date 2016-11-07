@@ -5,6 +5,7 @@
 #+JEKYLL_CATEGORIES: Stockholm, holiday, friends, days off, fun, EF, Electronic force
 #+JEKYLL_TAGS: Stockholm, holiday, vacation, days off, fun, friends, EF, electronic force
 #+JEKYLL_PUBLISHED: false
+#+JEKYLL_COMMENTS: true
 
 * Electronic Force party night - We had the hell open
 

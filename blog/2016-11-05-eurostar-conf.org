@@ -5,6 +5,7 @@
 #+JEKYLL_CATEGORIES: Testing, Stockholm, Eurostar
 #+JEKYLL_TAGS:
 #+JEKYLL_PUBLISHED: true
+#+JEKYLL_COMMENTS: true
 
 * The EuroSTAR Conference has finished
 After 4 Days the Eurostar Conference 2016 has finished and it showed

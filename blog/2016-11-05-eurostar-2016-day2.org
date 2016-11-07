@@ -5,6 +5,7 @@
 #+JEKYLL_CATEGORIES: EuroSTAR, Conference, Testing
 #+JEKYLL_TAGS: EuroSTAR, Conference, 2016, Testing
 #+JEKYLL_PUBLISHED: false
+#+JEKYLL_COMMENTS: true
 
 * Day 2 of the EuroSTAR Conference has passed with a lot of happening
 This day was just dedicated to the Question "How can we learn from new

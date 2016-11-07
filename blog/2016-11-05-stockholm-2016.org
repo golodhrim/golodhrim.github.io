@@ -5,7 +5,7 @@
 #+JEKYLL_CATEGORIES: Stockholm, holiday, friends, days off, fun, EF, Electronic force
 #+JEKYLL_TAGS: Stockholm, holiday, vacation, days off, fun, friends, EF, electronic force
 #+JEKYLL_PUBLISHED: false
-
+#+JEKYLL_COMMENTS: true
 * Tour through Stockholm - 15 km of a walk and a lot of Fun
 
 * Meetup with the Electronic Force

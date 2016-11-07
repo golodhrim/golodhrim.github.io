@@ -5,6 +5,7 @@
 #+JEKYLL_CATEGORIES: EuroSTAR, Conference, Testing
 #+JEKYLL_TAGS: EuroSTAR, Conference, 2016, Testing
 #+JEKYLL_PUBLISHED: true
+#+JEKYLL_COMMENTS: true
 
 * EuroSTAR Conference 2016 - First Day Summary
 The First day was honored to the topic of testing with
