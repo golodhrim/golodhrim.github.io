@@ -4,7 +4,7 @@
   <title><![CDATA[Testing, Security and DevOps]]></title>
   <link href="http://golodhrim.github.io/atom.xml" rel="self"/>
   <link href="http://golodhrim.github.io/"/>
-  <updated>2016-11-07T15:57:27+01:00</updated>
+  <updated>2016-11-07T15:59:56+01:00</updated>
   <id>http://golodhrim.github.io/</id>
   <author>
     <name><![CDATA[Martin 'golodhrim' Scholz]]></name>
@@ -170,12 +170,14 @@ information.
 
 <p>
 For that we need to move from variables to tests.
-#. Identify stakeholders' needs
-#. Brainstorm variables for it
-#. Select a variable to explore
-#. Select a value to try and
-#. run it.
 </p>
+<ol class="org-ol">
+<li>Identify stakeholders' needs</li>
+<li>Brainstorm variables for it</li>
+<li>Select a variable to explore</li>
+<li>Select a value to try and</li>
+<li>run it.</li>
+</ol>
 
 
 <p>

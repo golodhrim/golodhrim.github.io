@@ -79,11 +79,11 @@ that will cover them. Now it is time on how to provide the
 information.
 
 For that we need to move from variables to tests.
-#. Identify stakeholders' needs
-#. Brainstorm variables for it
-#. Select a variable to explore
-#. Select a value to try and
-#. run it.
+1. Identify stakeholders' needs
+2. Brainstorm variables for it
+3. Select a variable to explore
+4. Select a value to try and
+5. run it.
 
 
 {{{more}}}
