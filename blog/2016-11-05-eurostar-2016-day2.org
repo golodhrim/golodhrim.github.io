@@ -12,5 +12,14 @@ Testers and how can we learn new Testers to use the other view at
 software". By some introduction games we all learned on how to act and
 see in a new style.
 
+* Stay Sharp by James Lyndsay
+
+* "How to Test the Inside of your Head" by Liz Keogh
+
+* "Two Generations in Software Testing - the Way we learn" by Christian and Gitte Ottosen
+
+* "Lessons learned from the worst bug I ever found" by Ru Cindrea
+
+
 
 {{{more}}}

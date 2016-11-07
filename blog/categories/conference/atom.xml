@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Testing, Security and DevOps]]></title>
-  <link href="http://golodhrim.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Conference, | Testing, Security and DevOps]]></title>
+  <link href="http://golodhrim.github.io/blog/categories/conference/atom.xml" rel="self"/>
   <link href="http://golodhrim.github.io/"/>
   <updated>2016-11-07T13:38:32+01:00</updated>
   <id>http://golodhrim.github.io/</id>
@@ -12,46 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[EuroStar Conference 2016 - Stockholm Sweden]]></title>
-    <link href="http://golodhrim.github.io/blog/2016-11-03-eurostar-conf.html"/>
-    <updated>2016-11-03T00:00:00+01:00</updated>
-    <id>http://golodhrim.github.io/blog/eurostar-conf</id>
-    <content type="html"><![CDATA[<div id="outline-container-orgheadline1" class="outline-2">
-<h2 id="orgheadline1">The EuroSTAR Conference has finished</h2>
-<div class="outline-text-2" id="text-orgheadline1">
-<p>
-After 4 Days the Eurostar Conference 2016 has finished and it showed
-up that I got to much to work up again. I will for sure go and get the
-news I fetched up here. But for now I will go to get some relaxing for
-the next 4 days. :) Have fun, like I will have in Stockholm.
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgheadline2" class="outline-2">
-<h2 id="orgheadline2">"Test Management Revisited" by Anne-Marie Charrett</h2>
-</div>
-
-<div id="outline-container-orgheadline3" class="outline-2">
-<h2 id="orgheadline3">"The Power of Doubt - Becoming a Software Skeptic" by Zeger van Hese</h2>
-</div>
-
-<div id="outline-container-orgheadline4" class="outline-2">
-<h2 id="orgheadline4">"Don't learn the Rules - learn 'from' the Rules" by Dale Emery</h2>
-</div>
-
-<div id="outline-container-orgheadline5" class="outline-2">
-<h2 id="orgheadline5">"What I wish I knew in my first year of Testing" by Nicola Owen</h2>
-<div class="outline-text-2" id="text-orgheadline5">
-<p>
-<!-- more -->
-</p>
-</div>
-</div>
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[EuroSTAR Conference 2016 - Day 1 Summary]]></title>
@@ -69,6 +29,9 @@ how to generate these variables and use them.
 </p>
 </div>
 </div>
+
+
+
 
 <div id="outline-container-orgheadline3" class="outline-2">
 <h2 id="orgheadline3">Notes from "Testing with variables" by Dale Emery taken by Martin 'golodhrim' Scholz</h2>
@@ -136,6 +99,7 @@ I could vary &lt;VARIABLENAME&gt;.
 </div>
 </div>
 </div>
+
 ]]></content>
   </entry>
   

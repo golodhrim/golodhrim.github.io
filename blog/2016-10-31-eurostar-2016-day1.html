@@ -5,12 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Blog Archive - Testing, Security and DevOps</title>
+  <title>EuroSTAR Conference 2016 - Day 1 Summary - Testing, Security and DevOps</title>
   <meta name="author" content="Martin 'golodhrim' Scholz">
 
   
-  <meta name="description" content="Blog Archive 2016 EuroStar Conference 2016 - Stockholm Sweden
-Nov 03 2016 posted in eurostar, stockholm,, testing, EuroSTAR Conference 2016 - Day 1 &hellip;">
+  <meta name="description" content="EuroSTAR Conference 2016 - First Day Summary The First day was honored to the topic of testing with
+variables. Thank you &#x2026; for the notes you &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +19,7 @@ Nov 03 2016 posted in eurostar, stockholm,, testing, EuroSTAR Conference 2016 - 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://golodhrim.github.io/blog/archives/index.html">
+  <link rel="canonical" href="http://golodhrim.github.io/blog/2016-10-31-eurostar-2016-day1.html">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Testing, Security and DevOps" type="application/atom+xml">
@@ -77,49 +77,152 @@ Nov 03 2016 posted in eurostar, stockholm,, testing, EuroSTAR Conference 2016 - 
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Blog Archive</h1>
+    
+      <h1 class="entry-title">EuroSTAR Conference 2016 - Day 1 Summary</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-10-31'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>31</span><span class='date-suffix'>st</span>, <span class='date-year'>2016</span></span> <span class='time'>12:00 am</span></time>
+        
+           | <a href="#disqus_thread"
+             data-disqus-identifier="http://golodhrim.github.io">Comments</a>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives">
 
 
-
-  
-  <h2>2016</h2>
-
-<article>
-  
-<h1><a href="/blog/2016-11-03-eurostar-conf.html">EuroStar Conference 2016 - Stockholm Sweden</a></h1>
-<time datetime="2016-11-03T00:00:00+01:00" pubdate><span class='month'>Nov</span> <span class='day'>03</span> <span class='year'>2016</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/eurostar/'>eurostar</a>, <a class='category' href='/blog/categories/stockholm/'>stockholm,</a>, <a class='category' href='/blog/categories/testing/'>testing,</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2016-10-31-eurostar-2016-day1.html">EuroSTAR Conference 2016 - Day 1 Summary</a></h1>
-<time datetime="2016-10-31T00:00:00+01:00" pubdate><span class='month'>Oct</span> <span class='day'>31</span> <span class='year'>2016</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/conference/'>conference,</a>, <a class='category' href='/blog/categories/eurostar/'>eurostar,</a>, <a class='category' href='/blog/categories/testing/'>testing</a></span>
-</footer>
-
-
-</article>
-
+<div class="entry-content"><div id="outline-container-orgheadline1" class="outline-2">
+<h2 id="orgheadline1">EuroSTAR Conference 2016 - First Day Summary</h2>
+<div class="outline-text-2" id="text-orgheadline1">
+<p>
+The First day was honored to the topic of testing with
+variables. Thank you &#x2026; for the notes you gave us and showed us on
+how to test by variables while also finding out about the subjects on
+how to generate these variables and use them.
+</p>
+</div>
 </div>
 
+<div id="outline-container-orgheadline3" class="outline-2">
+<h2 id="orgheadline3">Notes from "Testing with variables" by Dale Emery taken by Martin 'golodhrim' Scholz</h2>
+<div class="outline-text-2" id="text-orgheadline3">
+</div><div id="outline-container-orgheadline2" class="outline-3">
+<h3 id="orgheadline2">Variables and Testing</h3>
+<div class="outline-text-3" id="text-orgheadline2">
+<p>
+First identify your variables that could be changed and select the
+needed ones. But be aware, there will always be variables you are not
+aware of and that can influence a lot in the end.
+The first question we need to ask is: "What is a variable?"
+</p>
+<dl class="org-dl">
+<dt>Variable</dt><dd>Anything whose value can be changed</dd>
+</dl>
+<p>
+After all there is not only one type of variables, there are at all
+three:
+</p>
+<ul class="org-ul">
+<li><span class="underline">obvious</span>, like a field on a form,</li>
+<li><span class="underline">hidden</span>, like an internal value or</li>
+<li><span class="underline">subtle</span>, like the state of a control</li>
+</ul>
+<p>
+Testing here involves choosing values for every variable (not just the
+obvious ones).
+</p>
+
+<dl class="org-dl">
+<dt>A Subtle Variable</dt><dd></dd>
+</dl>
+<p>
+In January 2004, Nasa lost contact with the Mars Rover Spirit.
+They soon discovered that the Spirit had encountered a serious anomaly and was rebooting itself over and over again.
+According to an article on the site Spaceflight Now, the Mars Rover problem was that there were <b>too many files on the flash memory</b>.
+</p>
+
+<dl class="org-dl">
+<dt>Available Disk Space on Install</dt><dd></dd>
+</dl>
+
+<div class="figure">
+<p><img src="images/mindmap.png" alt="mindmap.png" />
+</p>
+</div>
+
+<p>
+To make sure you identified a variable right, try this tip:
+</p>
+
+<blockquote>
+<p>
+I could vary &lt;VARIABLENAME&gt;.
+(&lt;N&gt;) possible values for &lt;VARIABLENAME&gt; are &lt;VAR1&gt;, &lt;VAR2&gt;, &#x2026; and &lt;VARn&gt;.
+</p>
+</blockquote>
+
+
+
+<p>
+<!-- more -->
+</p>
+</div>
+</div>
+</div>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Martin 'golodhrim' Scholz</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2016-10-31'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>31</span><span class='date-suffix'>st</span>, <span class='date-year'>2016</span></span> <span class='time'>12:00 am</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/conference/'>conference,</a>, <a class='category' href='/blog/categories/eurostar/'>eurostar,</a>, <a class='category' href='/blog/categories/testing/'>testing</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://golodhrim.github.io/blog/2016-10-31-eurostar-2016-day1.html" data-via="golodhrimf" data-counturl="http://golodhrim.github.io/blog/2016-10-31-eurostar-2016-day1.html" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+      
+        <a class="basic-alignment right" href="/blog/2016-11-03-eurostar-conf.html" title="Next Post: EuroStar Conference 2016 - Stockholm Sweden">EuroStar Conference 2016 - Stockholm Sweden &raquo;</a>
+      
+    </p>
+  </footer>
 </article>
 
 </div>

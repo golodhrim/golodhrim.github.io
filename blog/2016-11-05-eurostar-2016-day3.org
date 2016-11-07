@@ -7,8 +7,11 @@
 #+JEKYLL_PUBLISHED: false
 
 * EuroSTAR Conference 2016 Day 3 has passed, What happened today?
--
--
+
+* "Application Security Testing: A new approach" by Declan O'Riordan
+
+* "Instructional Games for Testers" by Graham Thomas
+
 
 
 {{{more}}}
