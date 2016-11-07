@@ -29,7 +29,10 @@ obvious ones).
 
 - A Subtle Variable ::
 In January 2004, Nasa lost contact with the Mars Rover Spirit.
-They soon discovered that the Spirit had encountered a serious anomaly and was rebooting itself over and over again.
+
+They soon discovered that the Spirit had encountered a serious anomaly
+and was rebooting itself over and over again.
+
 According to an article on the site Spaceflight Now, the Mars Rover problem was that there were *too many files on the flash memory*.
 
 - Available Disk Space on Install ::
@@ -53,6 +56,7 @@ To make sure you identified a variable right, try this tip:
 
 #+BEGIN_QUOTE
 I could vary <VARIABLENAME>.
+
 (<N>) possible values for <VARIABLENAME> are <VAR1>, <VAR2>, ... and <VARn>.
 #+END_QUOTE
 
