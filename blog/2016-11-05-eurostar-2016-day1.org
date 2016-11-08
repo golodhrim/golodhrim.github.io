@@ -435,6 +435,61 @@ and *Outputs*.
 #+BEGIN_QUOTE
 Every bug is 100% reproducible!*
 
-\* But only if you can discover and control all the
+* But only if you can discover and control all the
 *variables* that affected the software's behavior.
 #+END_QUOTE
+
+When a test reveals a bug you can have three cases:
+- You can reproduce it and understand why it is happening, or
+- You cna reproduce it but don't understand it,
+- You can't reproduce it.
+
+Any bug will be triggered by at least one of the three points:
+- Fault
+- Failure
+- Conditions
+
+**** Example: An Illogical Theory of Error
+An old man comes to an garage, he complains that his car doesn't like
+some sort of Ice Cream he sometimes buys. So that's what he tells:
+
+"Boys, my car is having trouble. It does not like when I buy
+Tomato-Tofu-Basil Ice Cream. I can buy vanilla, chocolate, everything,
+but not Tomato-Tofu-Basil one."
+
+1. Brainstorm a list of possible contributing variables.
+2. Categorize the variables
+3. Experiment methodically to eliminate possible route causes until
+   you find the culprit.
+
+#+BEGIN_SRC dot :file ../blogimages/mindmap.png :exports results
+  digraph graphname {
+          rankdir = "LR";
+
+          subgraph { "weather" "ice cream" "location" "driver" "people" "time" "car" "engine" };
+
+          "Car won't start" -> { "weather" "ice cream" "location" "driver" "people" "time" "car" };
+          "weather" -> { "season" "humidity" "temperature" } ;
+          "ice cream" -> { "flavour" "ingredients" "quantity he buys" "price" };
+          "location" -> { "where he parks" "where he puts the ice cream" "where he buys" };
+          "driver" -> { "state of driver" "motivation to go home" "attitude towards flavor" };
+          "people" -> { "passengers" "who drives" "relationship to the driver" "his profession" };
+          "time" -> { "season" "time of day" };
+          "car" -> { "battery charge" "level of gas" "engine" };
+          "engine" -> { "wet or dry" "warm or cold" };
+  }
+#+END_SRC
+
+#+RESULTS:
+[[file:../blogimages/mindmap.png]]
+
+Please if you do the testing, and use the Variable Bug Analysis
+consider these variables:
+- Available memory
+- Data in memory or cache
+- Program state
+- Configuration state
+- Other program state
+- Execution speed
+- System load
+- Other parts of the system.

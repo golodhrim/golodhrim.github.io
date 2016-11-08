@@ -1170,18 +1170,81 @@ and <b>Outputs</b>.
 <div id="outline-container-orgheadline15" class="outline-3">
 <h3 id="orgheadline15">Variables and Bugs!</h3>
 <div class="outline-text-3" id="text-orgheadline15">
-<blockquote>
 <p>
+#+BEGIN_QUOTE
 Every bug is 100% reproducible!*
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline17" class="outline-2">
+<h2 id="orgheadline17">But only if you can discover and control all the</h2>
+<div class="outline-text-2" id="text-orgheadline17">
+<p>
+<b>variables</b> that affected the software's behavior.
+#+END_QUOTE
 </p>
 
 <p>
-\* But only if you can discover and control all the
-<b>variables</b> that affected the software's behavior.
+When a test reveals a bug you can have three cases:
 </p>
-</blockquote>
+<ul class="org-ul">
+<li>You can reproduce it and understand why it is happening, or</li>
+<li>You cna reproduce it but don't understand it,</li>
+<li>You can't reproduce it.</li>
+</ul>
+
+<p>
+Any bug will be triggered by at least one of the three points:
+</p>
+<ul class="org-ul">
+<li>Fault</li>
+<li>Failure</li>
+<li>Conditions</li>
+</ul>
 </div>
+
+<ul class="org-ul"><li><a id="orgheadline18"></a>Example: An Illogical Theory of Error<br  /><div class="outline-text-5" id="text-orgheadline18">
+<p>
+An old man comes to an garage, he complains that his car doesn't like
+some sort of Ice Cream he sometimes buys. So that's what he tells:
+</p>
+
+<p>
+"Boys, my car is having trouble. It does not like when I buy
+Tomato-Tofu-Basil Ice Cream. I can buy vanilla, chocolate, everything,
+but not Tomato-Tofu-Basil one."
+</p>
+
+<ol class="org-ol">
+<li>Brainstorm a list of possible contributing variables.</li>
+<li>Categorize the variables</li>
+<li>Experiment methodically to eliminate possible route causes until
+you find the culprit.</li>
+</ol>
+
+
+<div class="figure">
+<p><img src="../blogimages/mindmap.png" alt="mindmap.png" />
+</p>
 </div>
+
+<p>
+Please if you do the testing, and use the Variable Bug Analysis
+consider these variables:
+</p>
+<ul class="org-ul">
+<li>Available memory</li>
+<li>Data in memory or cache</li>
+<li>Program state</li>
+<li>Configuration state</li>
+<li>Other program state</li>
+<li>Execution speed</li>
+<li>System load</li>
+<li>Other parts of the system.</li>
+</ul>
+</div></li></ul>
 </div>
 </div>
 
