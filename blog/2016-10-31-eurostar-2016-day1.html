@@ -112,9 +112,9 @@ how to generate these variables and use them.
 </div>
 </div>
 
-<div id="outline-container-orgheadline10" class="outline-2">
-<h2 id="orgheadline10">Notes from "Testing with variables" by Dale Emery taken by Martin 'golodhrim' Scholz</h2>
-<div class="outline-text-2" id="text-orgheadline10">
+<div id="outline-container-orgheadline15" class="outline-2">
+<h2 id="orgheadline15">Notes from "Testing with variables" by Dale Emery taken by Martin 'golodhrim' Scholz</h2>
+<div class="outline-text-2" id="text-orgheadline15">
 </div><div id="outline-container-orgheadline2" class="outline-3">
 <h3 id="orgheadline2">Variables and Testing</h3>
 <div class="outline-text-3" id="text-orgheadline2">
@@ -168,8 +168,8 @@ According to an article on the site Spaceflight Now, the Mars Rover problem was 
 
 <p>
 To make sure you identified a variable right, try this tip:
+<!-- more -->
 </p>
-
 <blockquote>
 <p>
 I could vary &lt;VARIABLENAME&gt;.
@@ -665,11 +665,505 @@ types listed on the previous page.</li>
 </tbody>
 </table>
 
-
 <p>
-<!-- more -->
+When ever there is a network connection in a diagram, try the
+following:
+</p>
+<ul class="org-ul">
+<li>disconnect the network</li>
+<li>slow the connection down (28.8 modem over Internet or VPN) or speed
+it up</li>
+<li>force timeouts</li>
+<li>force connection refusals</li>
+<li>close the port on which the server is listening</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline10" class="outline-4">
+<h4 id="orgheadline10">Database</h4>
+<div class="outline-text-4" id="text-orgheadline10">
+<p>
+Looking at the database schema can give you a great deal of
+information about the data dependencies in a system.
+</p>
+<dl class="org-dl">
+<dt>EXAMPLE</dt><dd>Check Integrity Constraints</dd>
+</dl>
+<p>
+Imagine a system where each invoice is associated with a customer
+record that has attributes such as contact information and credit
+limit.
+</p>
+
+<div class="figure">
+<p><img src="../blogimages/dbmodel-ok.png" alt="dbmodel-ok.png" />
 </p>
 </div>
+
+<p>
+Invoices have a dependency on Customer data. Now imagine what happens
+if the Customer record is deleted. What happens to the Invoice record?
+</p>
+
+
+<div class="figure">
+<p><img src="../blogimages/dbmodel-nok.png" alt="dbmodel-nok.png" />
+</p>
+</div>
+
+<p>
+Another Example is the data flow. It is always important to follow the
+data through the complete system system, cause you might get boundary
+conflicts.
+</p>
+
+
+<div class="figure">
+<p><img src="../blogimages/dbmodel-ok.png" alt="dbmodel-ok.png" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline11" class="outline-3">
+<h3 id="orgheadline11">Variables and Categories</h3>
+<div class="outline-text-3" id="text-orgheadline11">
+<blockquote>
+<p>
+Elements of Requiremetns
+</p>
+
+<p>
+Categories of Computation
+</p>
+</blockquote>
+
+<p>
+We can use a requirements model to help us explore the users'
+perspectives.
+</p>
+
+<blockquote>
+<p>
+The essential elements of requirements are:
+</p>
+<ul class="org-ul">
+<li>Users</li>
+<li>Functions</li>
+<li>Attributes</li>
+<li>Constraints</li>
+</ul>
+<p>
+(from Exploring Requirements by Gause &amp; Weinberg)
+</p>
+</blockquote>
+</div>
+
+<div id="outline-container-orgheadline12" class="outline-4">
+<h4 id="orgheadline12">Know your Users</h4>
+<div class="outline-text-4" id="text-orgheadline12">
+<p>
+First Identify your users. They include anyone or anything who will:
+</p>
+<ul class="org-ul">
+<li>Use it</li>
+<li>Integrate with it</li>
+<li>Get reports from it</li>
+<li>Be affected by it</li>
+<li>Make decisions about it</li>
+<li>Have a stake in its success</li>
+<li>Want to thwart it</li>
+</ul>
+
+<blockquote>
+<p>
+It's a good idea to get more than one perspective in identifying
+users. The more inclusive this part of the process is, the fewer
+surprises later.
+</p>
+</blockquote>
+
+<p>
+Functions are capabilities and will give you answers to the question
+what a system should do.
+</p>
+<ul class="org-ul">
+<li>It needs to "sort employees by salary".</li>
+<li>It should "report current account balance".</li>
+<li>It should "inform me" when a new task arrives in my inbox.</li>
+</ul>
+
+<p>
+Users often express functions as verbs.
+</p>
+
+<p>
+Attributes in contrast are descriptive and anser the question what
+characteristics the system should have.
+</p>
+<ul class="org-ul">
+<li>It should be "scalable".</li>
+<li>I want it to be "easy to use".</li>
+</ul>
+<p>
+Attributes may come in the form of:
+</p>
+<dl class="org-dl">
+<dt>Qualities</dt><dd>reliability, scalability, testability, performance, and
+other "-ilities" of the system.</dd>
+<dt>Adjectives</dt><dd>that describe how the software feels to the user
+("responsive").</dd>
+<dt>Adverbs</dt><dd>that further modify the function.</dd>
+</dl>
+
+<p>
+Finally Constraints are the limits. They may address:
+</p>
+<dl class="org-dl">
+<dt>Technical issues</dt><dd><ul class="org-ul">
+<li>We only run Linux here.</li>
+<li>The server must respond to the client within 5 seconds.</li>
+</ul></dd>
+<dt>Human factors</dt><dd><ul class="org-ul">
+<li>This will be deployed to low resolution monitors, so the screens
+cannot be larger than 640x480.</li>
+</ul></dd>
+<dt>Business value</dt><dd><ul class="org-ul">
+<li>It sould be faster than doing the same thing manually.</li>
+</ul></dd>
+<dt>Physical limitations</dt><dd><ul class="org-ul">
+<li>Satellite communications have high latency, so our software must
+tolerate communication delays.</li>
+</ul>
+<p>
+Any other kind of limits to the system.
+</p></dd>
+</dl>
+</div>
+
+<ul class="org-ul"><li><a id="orgheadline13"></a>Exercise: Users, Functions, Attributes, Constraints<br  /><div class="outline-text-5" id="text-orgheadline13">
+<p>
+For the email system you use, identify as many users, functions,
+attributes and constraints as possible:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Users</th>
+<th scope="col" class="org-left">Functions</th>
+<th scope="col" class="org-left">Attributes</th>
+<th scope="col" class="org-left">Constraints</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">internals</td>
+<td class="org-left">send mail</td>
+<td class="org-left">secure</td>
+<td class="org-left">RFC conformacy</td>
+</tr>
+
+<tr>
+<td class="org-left">externals</td>
+<td class="org-left">send group mails</td>
+<td class="org-left">searchable</td>
+<td class="org-left">attachment size</td>
+</tr>
+
+<tr>
+<td class="org-left">WGs</td>
+<td class="org-left">booking functions</td>
+<td class="org-left">fast</td>
+<td class="org-left">firewalling</td>
+</tr>
+
+<tr>
+<td class="org-left">OUs</td>
+<td class="org-left">follow RFC</td>
+<td class="org-left">customizable</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Employee</td>
+<td class="org-left">- forwarding</td>
+<td class="org-left">ACL-able</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">rooms</td>
+<td class="org-left">- CC</td>
+<td class="org-left">compatable</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">resources</td>
+<td class="org-left">- BCC</td>
+<td class="org-left">reliability</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Access Groups</td>
+<td class="org-left">notifications</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">role accounts</td>
+<td class="org-left">archiving</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Admins</td>
+<td class="org-left">OoO-Notes</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">IT-Support</td>
+<td class="org-left">speak proper SMTP</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Cover Maintenance</td>
+<td class="org-left">ACLs</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Adversary</td>
+<td class="org-left">well documented</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">CI-Tools</td>
+<td class="org-left">Spamfighting</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Automation Tools</td>
+<td class="org-left">AV-Checks</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">grey-/black-/whitelist</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">organisation Structure</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Filtering</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">cleanup/vacuum</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div></li>
+
+<li><a id="orgheadline14"></a>Exercise:<br  /><div class="outline-text-5" id="text-orgheadline14">
+<p>
+Taken the creation comments from the movie "Dragonheart" fill out the
+table Users, Functions, Attributes&#x2026; Here an example what can come up
+in 15 Minutes.
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Users</th>
+<th scope="col" class="org-left">Functions</th>
+<th scope="col" class="org-left">Attributes</th>
+<th scope="col" class="org-left">Constraints</th>
+<th scope="col" class="org-left">Design-Choices</th>
+<th scope="col" class="org-left">Metaphors</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Dennis Q</td>
+<td class="org-left">make you believe</td>
+<td class="org-left">powerfull</td>
+<td class="org-left">computer generated</td>
+<td class="org-left">18" tall</td>
+<td class="org-left">tail like a swiss army knife</td>
+</tr>
+
+<tr>
+<td class="org-left">Film Directory</td>
+<td class="org-left">talk</td>
+<td class="org-left">believable</td>
+<td class="org-left">size</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Audience</td>
+<td class="org-left">open mouth</td>
+<td class="org-left">powerful jaws</td>
+<td class="org-left">ratio</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Forces of Evil</td>
+<td class="org-left">use hands</td>
+<td class="org-left">detachable jaws</td>
+<td class="org-left">frame size and format</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Us as a Class</td>
+<td class="org-left">fly</td>
+<td class="org-left">has hands</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Designers</td>
+<td class="org-left">fight</td>
+<td class="org-left">Fighting tail</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Sean Connery</td>
+<td class="org-left">wrest</td>
+<td class="org-left">Wrestling tail</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Dale</td>
+<td class="org-left">swallow people</td>
+<td class="org-left">Wings</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Music Maker</td>
+<td class="org-left">swim</td>
+<td class="org-left">sequential movement</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">breath fire</td>
+<td class="org-left">long neck</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">pose</td>
+<td class="org-left">heavy chest</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">emote</td>
+<td class="org-left">huge fangs</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">eye colors</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Finally break down technical specifications by <b>Inputs</b>, <b>Processing</b>
+and <b>Outputs</b>.
+</p>
+</div></li></ul>
 </div>
 </div>
 </div>
