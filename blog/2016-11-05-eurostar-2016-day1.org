@@ -430,3 +430,11 @@ in 15 Minutes.
 
 Finally break down technical specifications by *Inputs*, *Processing*
 and *Outputs*.
+
+** Variables and Bugs!
+#+BEGIN_QUOTE
+Every bug is 100% reproducible![fn:reproduciblebug]
+
+[fn:reproduciblebug] But only if you can discover and control all the
+*variables* that affected the software's behavior.
+#+END_QUOTE

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Conference, | Testing, Security and DevOps]]></title>
   <link href="http://golodhrim.github.io/blog/categories/conference/atom.xml" rel="self"/>
   <link href="http://golodhrim.github.io/"/>
-  <updated>2016-11-08T11:09:56+01:00</updated>
+  <updated>2016-11-08T11:15:38+01:00</updated>
   <id>http://golodhrim.github.io/</id>
   <author>
     <name><![CDATA[Martin 'golodhrim' Scholz]]></name>
@@ -33,9 +33,9 @@ how to generate these variables and use them.
 
 
 
-<div id="outline-container-orgheadline15" class="outline-2">
-<h2 id="orgheadline15">Notes from "Testing with variables" by Dale Emery taken by Martin 'golodhrim' Scholz</h2>
-<div class="outline-text-2" id="text-orgheadline15">
+<div id="outline-container-orgheadline16" class="outline-2">
+<h2 id="orgheadline16">Notes from "Testing with variables" by Dale Emery taken by Martin 'golodhrim' Scholz</h2>
+<div class="outline-text-2" id="text-orgheadline16">
 </div><div id="outline-container-orgheadline2" class="outline-3">
 <h3 id="orgheadline2">Variables and Testing</h3>
 <div class="outline-text-3" id="text-orgheadline2">
@@ -1085,6 +1085,17 @@ Finally break down technical specifications by <b>Inputs</b>, <b>Processing</b>
 and <b>Outputs</b>.
 </p>
 </div></li></ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline15" class="outline-3">
+<h3 id="orgheadline15">Variables and Bugs!</h3>
+<div class="outline-text-3" id="text-orgheadline15">
+<blockquote>
+<p>
+Every bug is 100% reproducible!
+</p>
+</blockquote>
 </div>
 </div>
 </div>
