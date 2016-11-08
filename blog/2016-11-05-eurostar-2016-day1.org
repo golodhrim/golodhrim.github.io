@@ -37,7 +37,7 @@ and was rebooting itself over and over again.
 According to an article on the site Spaceflight Now, the Mars Rover problem was that there were *too many files on the flash memory*.
 
 - Available Disk Space on Install ::
-#+BEGIN_SRC dot :file ../blogimages/mindmap.png :exports results
+#+BEGIN_SRC dot :file ../blogimages/space-prog.png :exports results
   digraph graphname {
     U [label="User", shape=box, style=filled, color=blue]
     I [label="Installer", style=filled, color=yellow]
@@ -51,7 +51,7 @@ According to an article on the site Spaceflight Now, the Mars Rover problem was 
 #+END_SRC
 
 #+RESULTS:
-[[file:../blogimages/mindmap.png]]
+[[file:../blogimages/space-prog.png]]
 
 To make sure you identified a variable right, try this tip:
 
@@ -85,6 +85,167 @@ For that we need to move from variables to tests.
 3. Select a variable to explore
 4. Select a value to try and
 5. run it.
+
+** How is a Test Case Build?
+Elements of a Test Case are:
+#+BEGIN_SRC dot :file ../blogimages/tcelements.png :exports results
+  digraph graphname {
+    rankdir="LR"
+
+    S [label="Setup"]
+    A [label="Action(s)"]
+    E [label="Expectations"]
+
+    S -> A;
+    A -> E;
+  }
+#+END_SRC
+
+#+RESULTS:
+[[file:../blogimages/tcelements.png]]
+
+But WHY should we consider so many variables?
+
+Simply just imagine a program that converts binary numbers to decimal.
+
+| Input | Expected | Actual Result | Test Result |
+|-------+----------+---------------+-------------|
+|   000 |        0 |             0 | OK          |
+|   111 |        7 |             7 | OK          |
+|   101 |        5 |             5 | OK          |
+|   011 |        3 |             6 | nOK         |
+
+Analyzing Variables Helps Avoid the Problem of Incidental Correctness.
+
+So at that point you should build a catalog of generic tests, they
+will serve you as tests for various types of variables:
+- Text/Strings
+- Paths
+- Numbers
+- Dates
+- Windows
+- Option settings
+- etc.
+
+** Variables and Models
+#+BEGIN_QUOTE
+Testing fom existing models
+
+Testing by creating models
+
+Models of sytem structure
+
+Models of system behavior
+#+END_QUOTE
+
+*** Two views of a System: Dynamic and Static...
+- Dynamic models :: such as state models or flow charts show how the
+     system behaves.
+- Static models :: such as entity-relationship diagrams show the
+     structure of the system.
+
+So both totally different types of models, are giving us different
+views into the system.
+
+#+BEGIN_SRC dot :file ../blogimages/simplestmodel.png :exports results
+    digraph graphname {
+      rankdir="LR"
+
+      "On" -> "Off" [label="Start"];
+      "Off" -> "On" [label="Stop"];
+    }
+#+END_SRC
+
+#+RESULTS:
+[[file:../blogimages/simplestmodel.png]]
+
+On/Off are called States, Start/Stop are events and the change of
+states by an event are called a transition.
+
+These simple example could be extended pretty easy to something more
+complex but still simple:
+
+#+BEGIN_SRC dot :file ../blogimages/modeltwo.png :exports results
+  digraph graphname {
+    rankdir="LR"
+
+    "Off" -> "Cool" [label="Temp >\nSetting"];
+    "Cool" -> "Off" [label="Temp <=\nSetting"];
+    "Off" -> "Heat" [label="Temp <\nSetting"];
+    "Heat" -> "Off" [label="Temp >=\nSetting"];
+  }
+#+END_SRC
+
+#+RESULTS:
+[[file:../blogimages/modeltwo.png]]
+
+These easy examples could now lead us to an easy testing model:
+
+#+BEGIN_SRC dot :file ../blogimages/displaymodemodel.png :exports results
+  digraph graphname {
+    rankdir="LR"
+    W [label="White Screen"]
+    S [label="Slideshow"]
+    B [label="Black Screen"]
+
+    W -> S [label="any key pressed"];
+    S -> W [label="W pressed"];
+    B -> S [label="any key pressed"];
+    S -> B [label="B pressed"];
+  }
+#+END_SRC
+
+#+RESULTS:
+[[file:../blogimages/displaymodemodel.png]]
+
+Aboves diagram leads to the following Table:
+
+|           | Slideshow | White | Black |
+|-----------+-----------+-------+-------|
+| Slideshow | N/A       | "W"   | "B"   |
+|-----------+-----------+-------+-------|
+| White     | Any Key   | N/A   | N/A   |
+|-----------+-----------+-------+-------|
+| Black     | Any Key   | N/A   | N/A   |
+
+This table shows us that we don't know about keys that could also be
+used in the Präsentation mode, or how we could transition from Black
+to White with one key.
+
+*** Testing from State Models
+When testing from State Models, think about the following:
+1. _Transitions_
+   - Do all the events trigger the transitions we expect?
+     Test every path.
+   - What happens if we repeat loops
+     (submit-cancel-submit-cancel-repeat)? Check for memory leaks or
+     data corruption.
+2. _Interruptions_
+  - What happens if we force an exit from intermediate states?
+  - What happens if we trigger events when they aren't expected?
+
+*** Exercise: Modeling States
+1. Form teams
+2. Create a model of the states that a *bug* goes through in your bug
+   tracking system.
+3. Use your model to identify variables to vary
+4. Design tests from your state model. Think about the various test
+   types listed on the previous page.
+5. Prepare to share your model and tests with the other teams.
+
+*** TODO Insert the graphic!
+
+|           | REPORT | REJECT   | APPROVE  | REVIEW   | ASSIGN   | RESOLVE  | TESTFW    | CLOSE  | REOPEN    | RESUBMIT  | WAIT    |
+|-----------+--------+----------+----------+----------+----------+----------+-----------+--------+-----------+-----------+---------|
+| SUBMITTED | x      | -        | -        | REVIEWED | -        | -        | -         | -      | -         | -         | ON HOLD |
+| REJECTED  | -      | -        | -        | -        | -        | -        | -         | CLOSED | -         | SUBMITTED | -       |
+| VALIDATED | -      | -        | -        | -        | ASSIGNED | -        | -         | -      | -         | -         | ON HOLD |
+| ON HOLD   | -      | -        | APPROVED | -        | -        | -        | TESTED/QA | -      | -         | -         | -       |
+| RESOLVED  | -      | -        | -        | -        | -        | -        | TESTED/QA | -      | -         | -         | ON HOLD |
+| TESTED/QA | -      | -        | -        | -        | -        | -        | -         | CLOSED | -         | -         | ON HOLD |
+| CLOSED    | -      | -        | -        | -        | -        | -        | -         | -      | SUBMITTED | -         | -       |
+| REVIEWED  | -      | REJECTED | APPROVED | -        | -        | -        | -         | -      | -         | -         | ON HOLD |
+| ASSIGNED  | -      | -        | -        | -        | -        | RESOLVED | -         | -      | -         | -         | ON HOLD |
 
 
 {{{more}}}

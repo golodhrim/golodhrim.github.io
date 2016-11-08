@@ -112,9 +112,9 @@ how to generate these variables and use them.
 </div>
 </div>
 
-<div id="outline-container-orgheadline4" class="outline-2">
-<h2 id="orgheadline4">Notes from "Testing with variables" by Dale Emery taken by Martin 'golodhrim' Scholz</h2>
-<div class="outline-text-2" id="text-orgheadline4">
+<div id="outline-container-orgheadline10" class="outline-2">
+<h2 id="orgheadline10">Notes from "Testing with variables" by Dale Emery taken by Martin 'golodhrim' Scholz</h2>
+<div class="outline-text-2" id="text-orgheadline10">
 </div><div id="outline-container-orgheadline2" class="outline-3">
 <h3 id="orgheadline2">Variables and Testing</h3>
 <div class="outline-text-3" id="text-orgheadline2">
@@ -162,7 +162,7 @@ According to an article on the site Spaceflight Now, the Mars Rover problem was 
 </dl>
 
 <div class="figure">
-<p><img src="../blogimages/mindmap.png" alt="mindmap.png" />
+<p><img src="../blogimages/space-prog.png" alt="space-prog.png" />
 </p>
 </div>
 
@@ -220,11 +220,456 @@ For that we need to move from variables to tests.
 <li>Select a value to try and</li>
 <li>run it.</li>
 </ol>
+</div>
+</div>
+
+<div id="outline-container-orgheadline4" class="outline-3">
+<h3 id="orgheadline4">How is a Test Case Build?</h3>
+<div class="outline-text-3" id="text-orgheadline4">
+<p>
+Elements of a Test Case are:
+</p>
+
+<div class="figure">
+<p><img src="../blogimages/tcelements.png" alt="tcelements.png" />
+</p>
+</div>
+
+<p>
+But WHY should we consider so many variables?
+</p>
+
+<p>
+Simply just imagine a program that converts binary numbers to decimal.
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">Input</th>
+<th scope="col" class="org-right">Expected</th>
+<th scope="col" class="org-right">Actual Result</th>
+<th scope="col" class="org-left">Test Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">000</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-left">OK</td>
+</tr>
+
+<tr>
+<td class="org-right">111</td>
+<td class="org-right">7</td>
+<td class="org-right">7</td>
+<td class="org-left">OK</td>
+</tr>
+
+<tr>
+<td class="org-right">101</td>
+<td class="org-right">5</td>
+<td class="org-right">5</td>
+<td class="org-left">OK</td>
+</tr>
+
+<tr>
+<td class="org-right">011</td>
+<td class="org-right">3</td>
+<td class="org-right">6</td>
+<td class="org-left">nOK</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Analyzing Variables Helps Avoid the Problem of Incidental Correctness.
+</p>
+
+<p>
+So at that point you should build a catalog of generic tests, they
+will serve you as tests for various types of variables:
+</p>
+<ul class="org-ul">
+<li>Text/Strings</li>
+<li>Paths</li>
+<li>Numbers</li>
+<li>Dates</li>
+<li>Windows</li>
+<li>Option settings</li>
+<li>etc.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline5" class="outline-3">
+<h3 id="orgheadline5">Variables and Models</h3>
+<div class="outline-text-3" id="text-orgheadline5">
+<blockquote>
+<p>
+Testing fom existing models
+</p>
+
+<p>
+Testing by creating models
+</p>
+
+<p>
+Models of sytem structure
+</p>
+
+<p>
+Models of system behavior
+</p>
+</blockquote>
+</div>
+
+<div id="outline-container-orgheadline6" class="outline-4">
+<h4 id="orgheadline6">Two views of a System: Dynamic and Static&#x2026;</h4>
+<div class="outline-text-4" id="text-orgheadline6">
+<dl class="org-dl">
+<dt>Dynamic models</dt><dd>such as state models or flow charts show how the
+system behaves.</dd>
+<dt>Static models</dt><dd>such as entity-relationship diagrams show the
+structure of the system.</dd>
+</dl>
+
+<p>
+So both totally different types of models, are giving us different
+views into the system.
+</p>
+
+
+<div class="figure">
+<p><img src="../blogimages/simplestmodel.png" alt="simplestmodel.png" />
+</p>
+</div>
+
+<p>
+On/Off are called States, Start/Stop are events and the change of
+states by an event are called a transition.
+</p>
+
+<p>
+These simple example could be extended pretty easy to something more
+complex but still simple:
+</p>
+
+
+<div class="figure">
+<p><img src="../blogimages/modeltwo.png" alt="modeltwo.png" />
+</p>
+</div>
+
+<p>
+These easy examples could now lead us to an easy testing model:
+</p>
+
+
+<div class="figure">
+<p><img src="../blogimages/displaymodemodel.png" alt="displaymodemodel.png" />
+</p>
+</div>
+
+<p>
+Aboves diagram leads to the following Table:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">&#xa0;</th>
+<th scope="col" class="org-left">Slideshow</th>
+<th scope="col" class="org-left">White</th>
+<th scope="col" class="org-left">Black</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Slideshow</td>
+<td class="org-left">N/A</td>
+<td class="org-left">"W"</td>
+<td class="org-left">"B"</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">White</td>
+<td class="org-left">Any Key</td>
+<td class="org-left">N/A</td>
+<td class="org-left">N/A</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Black</td>
+<td class="org-left">Any Key</td>
+<td class="org-left">N/A</td>
+<td class="org-left">N/A</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+This table shows us that we don't know about keys that could also be
+used in the Präsentation mode, or how we could transition from Black
+to White with one key.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline7" class="outline-4">
+<h4 id="orgheadline7">Testing from State Models</h4>
+<div class="outline-text-4" id="text-orgheadline7">
+<p>
+When testing from State Models, think about the following:
+</p>
+<ol class="org-ol">
+<li><span class="underline">Transitions</span>
+<ul class="org-ul">
+<li>Do all the events trigger the transitions we expect?
+Test every path.</li>
+<li>What happens if we repeat loops
+(submit-cancel-submit-cancel-repeat)? Check for memory leaks or
+data corruption.</li>
+</ul></li>
+<li><span class="underline">Interruptions</span>
+<ul class="org-ul">
+<li>What happens if we force an exit from intermediate states?</li>
+<li>What happens if we trigger events when they aren't expected?</li>
+</ul></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgheadline8" class="outline-4">
+<h4 id="orgheadline8">Exercise: Modeling States</h4>
+<div class="outline-text-4" id="text-orgheadline8">
+<ol class="org-ol">
+<li>Form teams</li>
+<li>Create a model of the states that a <b>bug</b> goes through in your bug
+tracking system.</li>
+<li>Use your model to identify variables to vary</li>
+<li>Design tests from your state model. Think about the various test
+types listed on the previous page.</li>
+<li>Prepare to share your model and tests with the other teams.</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgheadline9" class="outline-4">
+<h4 id="orgheadline9"><span class="todo TODO">TODO</span> Insert the graphic!</h4>
+<div class="outline-text-4" id="text-orgheadline9">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">&#xa0;</th>
+<th scope="col" class="org-left">REPORT</th>
+<th scope="col" class="org-left">REJECT</th>
+<th scope="col" class="org-left">APPROVE</th>
+<th scope="col" class="org-left">REVIEW</th>
+<th scope="col" class="org-left">ASSIGN</th>
+<th scope="col" class="org-left">RESOLVE</th>
+<th scope="col" class="org-left">TESTFW</th>
+<th scope="col" class="org-left">CLOSE</th>
+<th scope="col" class="org-left">REOPEN</th>
+<th scope="col" class="org-left">RESUBMIT</th>
+<th scope="col" class="org-left">WAIT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">SUBMITTED</td>
+<td class="org-left">x</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">REVIEWED</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">ON HOLD</td>
+</tr>
+
+<tr>
+<td class="org-left">REJECTED</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">CLOSED</td>
+<td class="org-left">-</td>
+<td class="org-left">SUBMITTED</td>
+<td class="org-left">-</td>
+</tr>
+
+<tr>
+<td class="org-left">VALIDATED</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">ASSIGNED</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">ON HOLD</td>
+</tr>
+
+<tr>
+<td class="org-left">ON HOLD</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">APPROVED</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">TESTED/QA</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+</tr>
+
+<tr>
+<td class="org-left">RESOLVED</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">TESTED/QA</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">ON HOLD</td>
+</tr>
+
+<tr>
+<td class="org-left">TESTED/QA</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">CLOSED</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">ON HOLD</td>
+</tr>
+
+<tr>
+<td class="org-left">CLOSED</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">SUBMITTED</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+</tr>
+
+<tr>
+<td class="org-left">REVIEWED</td>
+<td class="org-left">-</td>
+<td class="org-left">REJECTED</td>
+<td class="org-left">APPROVED</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">ON HOLD</td>
+</tr>
+
+<tr>
+<td class="org-left">ASSIGNED</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">RESOLVED</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">-</td>
+<td class="org-left">ON HOLD</td>
+</tr>
+</tbody>
+</table>
 
 
 <p>
 <!-- more -->
 </p>
+</div>
 </div>
 </div>
 </div>
