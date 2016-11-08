@@ -4,7 +4,7 @@
   <title><![CDATA[Testing, Security and DevOps]]></title>
   <link href="http://golodhrim.github.io/atom.xml" rel="self"/>
   <link href="http://golodhrim.github.io/"/>
-  <updated>2016-11-08T11:15:38+01:00</updated>
+  <updated>2016-11-08T11:19:49+01:00</updated>
   <id>http://golodhrim.github.io/</id>
   <author>
     <name><![CDATA[Martin 'golodhrim' Scholz]]></name>
@@ -1130,7 +1130,12 @@ and <b>Outputs</b>.
 <div class="outline-text-3" id="text-orgheadline15">
 <blockquote>
 <p>
-Every bug is 100% reproducible!
+Every bug is 100% reproducible!*
+</p>
+
+<p>
+\* But only if you can discover and control all the
+<b>variables</b> that affected the software's behavior.
 </p>
 </blockquote>
 </div>
